@@ -3,7 +3,7 @@ name: Activity Type Workflow
 #on: [push, issues, pull_request, pull_request_review]
 on: 
   pull_request :
-    types: opened
+    types: [opened, synchronize, closed]
 
 jobs:
 
