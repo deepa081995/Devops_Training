@@ -1,0 +1,30 @@
+name: Need Context
+
+on: push
+#on: workflow_dispatch
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print build
+        run:  echo 'build'
+      
+  
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: Print test - chrome
+        run:  echo 'test chrome'
+      - name: Print test - edge
+        run:  echo 'test edge'
+  
+  
+  deploy:
+    needs: [build,test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print deploy
+        run:  echo 'deploy'
