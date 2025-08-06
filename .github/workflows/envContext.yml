@@ -1,0 +1,18 @@
+name: Env Variable
+
+on:
+  workflow_dispatch
+env:
+  Var1: workflow
+jobs:
+  variables:
+    env:
+      var1: jobs
+    runs-on: ubentu-latest
+    steps:
+    - name: Print
+      run: echo '${{env.var1}}'
+      env:
+        var1: steps
+    
+      
