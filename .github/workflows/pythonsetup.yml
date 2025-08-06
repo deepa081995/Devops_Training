@@ -1,0 +1,13 @@
+name: Python Setup
+
+on:
+  workflow_dispatch
+jobs:
+  python-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5.6.0
+        with:
+         python-version: '3'
+      - run: python -version
