@@ -1,11 +1,11 @@
-name: Env Variable
+name: Env Context
 
 on:
   workflow_dispatch
 env:
   Var1: workflow
 jobs:
-  variables:
+  env_context:
     env:
       var1: jobs
     runs-on: ubentu-latest
