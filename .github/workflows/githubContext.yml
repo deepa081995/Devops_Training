@@ -16,4 +16,4 @@ jobs:
           echo 'Repo token ${{github.token}}'
           echo 'workflow ${{github.workflow}}'
           echo 'Actor ${{github.actor}}'
-          echo 'trigger event ${{github.event}}'
+          echo 'trigger event ${{github.event_name}}'
