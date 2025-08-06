@@ -9,9 +9,9 @@ jobs:
       - name: Github Info
         run: |
           echo 'Repository details ${{github.repository}}'
-          echo 'Repo id ${{repository_id}}'
-          echo 'Repo owner ${{repository_owner}}'
-          echo 'Repo url ${{repositoryUrl}}'
-          echo 'Repo rentention days ${{retention_days}}'
-          echo 'Repo token ${{token}}'
-          echo 'workflow ${{workflow}}'
+          echo 'Repo id ${{github.repository_id}}'
+          echo 'Repo owner ${{github.repository_owner}}'
+          echo 'Repo url ${{github.repositoryUrl}}'
+          echo 'Repo rentention days ${{github.retention_days}}'
+          echo 'Repo token ${{github.token}}'
+          echo 'workflow ${{github.workflow}}'
