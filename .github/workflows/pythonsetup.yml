@@ -10,4 +10,4 @@ jobs:
         uses: actions/setup-python@v5.6.0
         with:
          python-version: '3'
-      - run: python -version
+      - run: python my_script.py
