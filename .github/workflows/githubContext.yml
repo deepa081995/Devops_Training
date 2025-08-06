@@ -15,3 +15,5 @@ jobs:
           echo 'Repo rentention days ${{github.retention_days}}'
           echo 'Repo token ${{github.token}}'
           echo 'workflow ${{github.workflow}}'
+          echo 'Actor ${{github.actor}}'
+          echo 'trigger event ${{github.event}}'
