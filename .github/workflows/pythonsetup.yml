@@ -3,7 +3,7 @@ name: Python Setup
 on:
   workflow_dispatch
 jobs:
-  python-js:
+  python:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Python
