@@ -1,18 +1,18 @@
-name: Env Context
+name: Variable
 
 on:
   workflow_dispatch
 env:
-  Var1: workflow
+  My_VAR: workflow
 jobs:
-  env_context:
+  variables:
     env:
-      var1: jobs
+      My_VAR: jobs
     runs-on: ubentu-latest
     steps:
     - name: Print
-      run: echo '${{env.var1}}'
+      run: echo '${{env.My_VAR}}'
       env:
-        var1: steps
+        My_VAR: steps
     
       
