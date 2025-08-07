@@ -10,7 +10,13 @@ jobs:
     steps:
       - name: Set greeting output
         id: set-msg
-        run: echo 'greeting=Hello World' >> $GITHUB_OUTPUT
+        run: echo 'greeting=Hello Welcome' >> $GITHUB_OUTPUT
 
       - name: Show greeting
         run: echo "The greeting is ${{ steps.set-msg.outputs.greeting }}"
+  dis-greeting:
+    needs: set-greeting
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "greeting is ${{ needs.set-greeting.outputs.greeting }}"
+    
