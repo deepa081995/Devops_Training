@@ -3,14 +3,14 @@ name: Outputs
 on: workflow_dispatch
 
 jobs:
-  outputs:
+  set-greeting:
     runs-on: ubuntu-latest
     outputs: 
       greeting: ${{ steps.set-msg.outputs.greeting }}
     steps:
       - name: Set greeting output
         id: set-msg
-        run: echo 'greeting= Hello World' >> $GITHUB_OUTPUT
+        run: echo 'greeting=Hello World' >> $GITHUB_OUTPUT
 
       - name: Show greeting
         run: echo "The greeting is ${{ steps.set-msg.outputs.greeting }}"
